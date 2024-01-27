@@ -16,23 +16,37 @@ $(document).ready(function(){
         }, 3000); // Tiempo de espera de 3 segundos
     }
 
+    // Función para encriptar texto
     function encriptarTexto() {
+        // Obtiene el valor del elemento de HTML con el id "texto" y lo convierte a minúsculas
         const textoOriginal = document.getElementById("texto").value.toLowerCase();
-        const textoEncriptado = textoOriginal.replace(/e/g, "enter")
-                                             .replace(/i/g, "imes")
-                                             .replace(/a/g, "ai")
-                                             .replace(/o/g, "ober")
-                                             .replace(/u/g, "ufat");
+        
+        // Realiza sustituciones para encriptar el texto:
+        const textoEncriptado = textoOriginal
+            .replace(/e/g, "enter")   // Reemplaza todas las letras "e" por "enter"
+            .replace(/i/g, "imes")    // Reemplaza todas las letras "i" por "imes"
+            .replace(/a/g, "ai")      // Reemplaza todas las letras "a" por "ai"
+            .replace(/o/g, "ober")    // Reemplaza todas las letras "o" por "ober"
+            .replace(/u/g, "ufat");   // Reemplaza todas las letras "u" por "ufat"
+        
+        // Muestra el resultado en algún lugar de la página web, probablemente a través de la función mostrarResultado()
         mostrarResultado(textoEncriptado);
     }
 
+    // Función para desencriptar texto
     function desencriptarTexto() {
+        // Obtiene el valor del elemento de HTML con el id "texto" y lo convierte a minúsculas
         const textoEncriptado = document.getElementById("texto").value.toLowerCase();
-        const textoOriginal = textoEncriptado.replace(/ufat/g, "u")
-                                            .replace(/ober/g, "o")
-                                            .replace(/ai/g, "a")
-                                            .replace(/imes/g, "i")
-                                            .replace(/enter/g, "e");
+        
+        // Realiza sustituciones para desencriptar el texto:
+        const textoOriginal = textoEncriptado
+            .replace(/ufat/g, "u")    // Reemplaza todas las ocurrencias de "ufat" por "u"
+            .replace(/ober/g, "o")    // Reemplaza todas las ocurrencias de "ober" por "o"
+            .replace(/ai/g, "a")      // Reemplaza todas las ocurrencias de "ai" por "a"
+            .replace(/imes/g, "i")    // Reemplaza todas las ocurrencias de "imes" por "i"
+            .replace(/enter/g, "e");  // Reemplaza todas las ocurrencias de "enter" por "e"
+        
+        // Muestra el resultado en algún lugar de la página web, probablemente a través de la función mostrarResultado()
         mostrarResultado(textoOriginal);
     }
 
