@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agregar la hoja de estilos de FontAwesome -->
     <title>Encriptador</title>
 </head>
 <body>
+    <div class="terminal-loader" id="loader" style="display: none;">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
+      
     <header>
         <div class="caja">
             <nav>
                 <ul>
                     <li>
-                        LOGO
+                       <span>ENCRIPT</span> <i class="fas fa-lock"></i> <!-- Icono de encript de FontAwesome -->
                     </li>
                     <li>
-                        Acerca de
+                        <a href="https://github.com/AdoDeveloper">Acerca del autor</a> <!-- Enlace al perfil de GitHub -->
                     </li>
                 </ul>
             </nav>
@@ -52,8 +65,9 @@
         </section>
     </main>
     <footer>
-        
+        &copy; 2024 Adolfo Cortez
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
