@@ -92,7 +92,6 @@ textarea {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    resize: none; /* Evita que se pueda redimensionar el textarea */
 }
 
 #content {
