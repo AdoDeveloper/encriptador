@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos el 100% de la altura de la ventana */
+}
+
+header {
+    background-color: #b3e5fc; /* Azul claro */
+    color: #000; /* Negro */
+    padding: 20px 0;
+}
+
+.caja {
+    margin: 0 auto;
+    max-width: 1200px; /* Limita el ancho máximo de la caja */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex; 
+    list-style-type: none;
+    padding: 0; 
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+main {
+    flex-grow: 1; /* Abarca el espacio restante */
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+section {
+    flex-basis: 48%; /* Ocupa el 48% del espacio */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra los contenidos verticalmente */
+    margin: 20px; /* Añade un margen entre las secciones */
+    max-width: 600px; /* Limita el ancho máximo de las secciones */
+}
+
+.izquierda {
+    order: -1;
+}
+
+.derecha {
+    text-align: center;
+    background-color: #d1c4e9; /* Morado claro */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+footer {
+    background-color: #aed581; /* Verde claro */
+    color: #000; /* Negro */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Coloca el footer en la parte inferior */
+}
+
+.botones button {
+    margin: 5px;
+    padding: 10px 20px; /* Ajusta el padding para hacer los botones más pequeños */
+    background-color: #673ab7; /* Morado */
+    color: #fff; /* Blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background-color: #512da8; /* Morado más oscuro */
+}
+
+textarea {
+    width: 100%; /* Ocupa el 100% del ancho del section */
+    height: 200px; /* Ajusta la altura */
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none; /* Evita que se pueda redimensionar el textarea */
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#content p {
+    font-size: 16px;
+    color: #666;
+}
+
+#texto-encriptado {
+    font-size: 16px;
+    margin-top: 20px;
+    word-break: break-all; /* Permite que el texto se rompa entre letras si es necesario */
+}
+
+#copiar-btn {
+    margin-top: 10px;
+    padding: 10px 20px; /* Ajusta el padding para hacer el botón más pequeño */
+    background-color: #673ab7; /* Morado */
+    color: #fff; /* Blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copiar-btn:hover {
+    background-color: #512da8; /* Morado más oscuro */
+}
+
+/* Media Queries para hacer que la página sea responsive */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .caja {
+        padding: 0 10px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: stretch; /* Estira los elementos horizontalmente */
+    }
+
+    section {
+        flex-basis: auto; /* Restaura el tamaño automático */
+        margin: 10px 0; /* Añade un margen superior e inferior */
+        max-width: none; /* Restaura el ancho máximo */
+    }
+
+    textarea {
+        height: 150px; /* Reduce la altura */
+    }
+
+    #content img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .botones button {
+        padding: 10px 15px; /* Ajusta el padding de los botones para dispositivos móviles */
+    }
+
+    #copiar-btn {
+        padding: 10px 15px; /* Ajusta el padding del botón de copiar para dispositivos móviles */
+    }   
+    
+}
